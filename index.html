@@ -14,22 +14,26 @@
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar" aria-label="Navegação principal">
         <a href="#" class="navbar__logo" aria-label="Voltar ao topo">
-            <span class="navbar__logo-titulo">Aço Verde</span>
+            <span class="navbar__logo-titulo" data-i18n="logo-titulo">Aço Verde</span>
             <span class="navbar__logo-sub">ArcelorMittal · XCarb®</span>
         </a>
 
         <ul class="navbar__nav" role="list">
-            <li><a href="#problema">O problema</a></li>
+            <li><a href="#problema" data-i18n="nav-problema">O problema</a></li>
             <li><a href="#arcelormittal">ArcelorMittal</a></li>
             <li><a href="#xcarb">XCarb®</a></li>
-            <li><a href="#simular">Simule o impacto</a></li>
-            <li><a href="#contato" class="navbar__btn">Saber mais →</a></li>
+            <li><a href="#contato" class="navbar__btn" data-i18n="nav-contato">Saber mais →</a></li>
         </ul>
 
-        <!-- Alternador de tema claro/escuro -->
-        <button id="btn-tema" aria-label="Alternar tema" title="Alternar tema">
-            <i class="fa-regular fa-moon" style="color: #bebebe;"></i>
-        </button>
+        <!-- Alternar tema e idioma -->
+        <div class="navbar__theme-lang">
+            <button id="btn-tema" aria-label="Alternar tema" title="Alternar tema">
+                <i class="fa-regular fa-moon" style="color: #bebebe;"></i>
+            </button>
+
+            <button id="btn-lang">EN | PT</button>
+        </div>
+
     </nav>
 
     <!-- ========== HERO ========== -->
@@ -38,15 +42,15 @@
         <div class="hero__bg" role="img" aria-label="Chaminés industriais contra um céu aberto"></div>
 
         <div class="hero__conteudo">
-            <span class="hero__label">Indústria · Clima · Transformação</span>
+            <span class="hero__label" data-i18n="hero-label">Indústria · Clima · Transformação</span>
 
-            <h1 class="hero__titulo">
+            <h1 class="hero__titulo" data-i18n="hero-titulo">
                 O aço está em tudo.<br>
                 <em>Como ele é feito</em><br>
                 importa mais do que você imagina.
             </h1>
 
-            <p class="hero__subtitulo">
+            <p class="hero__subtitulo" data-i18n="hero-subtitulo">
                 A indústria siderúrgica responde por 8% das emissões globais de CO₂ — mais do que toda a aviação
                 mundial.
                 Conheça o problema, entenda a escala, e descubra como a <span>ArcelorMittal</span> está construindo
@@ -54,22 +58,22 @@
             </p>
 
             <div class="hero__acoes">
-                <a href="#arcelormittal" class="btn-primario">Conheça a ArcelorMittal</a>
-                <a href="#problema" class="btn-secundario">Entenda o problema</a>
+                <a href="#arcelormittal" class="btn-primario" data-i18n="hero-btn-primario">Conheça a ArcelorMittal</a>
+                <a href="#problema" class="btn-secundario" data-i18n="hero-btn-secundario">Entenda o problema</a>
             </div>
         </div>
 
         <!-- Dado flutuante -->
         <div class="hero__dado" aria-label="Dado de impacto: 424 ppm de CO₂ na atmosfera em 2024">
             <div class="hero__dado-numero">424<small style="font-size:1.2rem">ppm</small></div>
-            <div class="hero__dado-label">
+            <div class="hero__dado-label" data-i18n="hero-dado-label">
                 concentração de CO₂ na atmosfera em 2024 — nível mais alto em 3 milhões de anos
             </div>
         </div>
 
         <!-- Indicador visual de scroll -->
         <div class="hero__scroll" aria-hidden="true">
-            <span>rolar</span>
+            <span data-i18n="hero-scroll">rolar</span>
             <div class="hero__scroll-linha"></div>
         </div>
 
@@ -79,8 +83,8 @@
 
         <!-- ========== SEÇÃO: PROBLEMA / TIMELINE ========== -->
         <section class="secao" id="problema">
-            <h2>A escalada do CO₂</h2>
-            <p>
+            <h2 data-i18n="problema-titulo">A escalada do CO₂</h2>
+            <p data-i18n="problema-descricao">
                 Desde a Revolução Industrial, a concentração de CO₂ na atmosfera cresceu 52%.
                 O que levou milênios para acumular, a indústria fez em 170 anos.
             </p>
@@ -92,8 +96,8 @@
         <!-- ========== SEÇÃO: ARCELORMITTAL ========== -->
         <section class="secao" id="arcelormittal">
             <div class="arcelormittal__conteudo">
-                <h2>Quem está agindo?</h2>
-                <p>
+                <h2 data-i18n="arcelormittal-titulo">Quem está agindo?</h2>
+                <p data-i18n="arcelormittal-descricao">
                     ArcelorMittal é a maior produtora de aço no Brasil e na América Latina e lidera
                     a transição para uma economia de baixo carbono, com investimentos em inovação e
                     projetos ESG.
@@ -111,8 +115,8 @@
         <!-- ========== SEÇÃO: XCARB ========== -->
         <section class="secao" id="xcarb">
             <div class="xcarb__intro">
-                <h2>E se o aço que move o mundo parasse de destruí-lo?</h2>
-                <p>
+                <h2 data-i18n="xcarb-titulo">E se o aço que move o mundo parasse de destruí-lo?</h2>
+                <p data-i18n="xcarb-descricao">
                     O XCarb® é a resposta da ArcelorMittal a essa pergunta. Um programa inteiro pensado
                     para provar que isso é possível. Explore e descubra como.
                 </p>
@@ -120,61 +124,60 @@
 
             <!-- Filtros: controlam quais cards aparecem no grid -->
             <div class="xcarb__filtros">
-                <button class="filtro__btn ativo" data-filtro="todos">Todos</button>
-                <button class="filtro__btn" data-filtro="energia">Energia Renovável</button>
-                <button class="filtro__btn" data-filtro="reciclagem">Economia Circular</button>
-                <button class="filtro__btn" data-filtro="emissoes">Neutralização de Carbono</button>
-                <button class="filtro__btn" data-filtro="inovacao">Inovação Tecnológica</button>
+                <button class="filtro__btn ativo" data-filtro="todos" data-i18n="filtro-todos">Todos</button>
+                <button class="filtro__btn" data-filtro="energia" data-i18n="filtro-energia">Energia Renovável</button>
+                <button class="filtro__btn" data-filtro="reciclagem" data-i18n="filtro-reciclagem">Economia Circular</button>
+                <button class="filtro__btn" data-filtro="emissoes" data-i18n="filtro-emissoes">Neutralização de Carbono</button>
+                <button class="filtro__btn" data-filtro="inovacao" data-i18n="filtro-inovacao">Inovação Tecnológica</button>
             </div>
             <div class="xcarb__grid"></div>
-        </section>
 
-        <!-- ========== SEÇÃO: SIMULADOR ========== -->
-        <section class="secao" id="simular">
-            <div class="simular__intro">
-                <h2>Simulação</h2>
-                <p>
-                    Quer ter uma ideia do impacto que a troca da produção do aço comum para o XCarb
-                    causa? Simule o impacto.
-                </p>
-            </div>
+            <!-- Carrossel de produtos -->
+            <div class="xcarb__produtos">
+                <div class="produtos__intro">
+                    <h2 data-i18n="produtos-titulo">Conheça os produtos</h2>
+                    <p data-i18n="produtos-descricao">Entre os produtos desenvolvidos com a tecnologia XCarb®, destacam-se:</p>
+                </div>
 
-            <div class="simular__controle">
-                <label for="slider-toneladas">Quantidade de XCarb produzida</label>
-                <input type="range" id="slider-toneladas" min="0" max="100000" step="1000" value="10000">
-                <span id="slider-valor">10.000 toneladas</span>
-            </div>
+                <div class="carrossel">
+                    <div class="carrossel__track"></div>
 
-            <div class="simular__resultado">
-                <div class="resultado__card">
-                    <span class="resultado__numero" id="co2-evitado">0</span>
-                    <span class="resultado__label">toneladas de CO₂ evitadas</span>
+                    <button class="carrossel__btn carrossel__btn--prev" aria-label="Produto anterior"
+                        title="Produto anterior" data-i18n-aria="carr-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carrossel__btn carrossel__btn--next" aria-label="Próximo produto"
+                        title="Próximo produto" data-i18n-aria="carr-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <div class="carrossel__dots"></div>
                 </div>
             </div>
         </section>
 
         <!-- ========== SEÇÃO: CONTATO ========== -->
         <section class="secao" id="contato">
-            <h2>A ArcelorMittal não esperou o futuro chegar para agir. E você?</h2>
-            <p>Preencha o formulário e receba um e-mail com mais informações.</p>
+            <h2 data-i18n="contato-titulo">A ArcelorMittal não esperou o futuro chegar para agir. E você?</h2>
+            <p data-i18n="contato-descricao">Preencha o formulário e receba um e-mail com mais informações.</p>
 
             <form id="form-contato" novalidate>
                 <div class="form__grupo">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                    <label for="nome" data-i18n="form-nome">Nome</label>
+                    <input type="text" id="nome" name="nome" data-i18n-placeholder="form-nome-placeholder" placeholder="Seu nome">
                 </div>
                 <div class="form__grupo">
-                    <label for="email">E-mail corporativo</label>
-                    <input type="email" id="email" name="email" placeholder="seu@empresa.com">
+                    <label for="email" data-i18n="form-email">E-mail corporativo</label>
+                    <input type="email" id="email" name="email" data-i18n-placeholder="form-email-placeholder" placeholder="seu@empresa.com">
                 </div>
-                <button type="submit">Vamos nessa!</button>
+                <button type="submit" data-i18n="form-submit">Vamos nessa!</button>
             </form>
 
             <div class="selo__container" id="selo-container" aria-live="polite" hidden>
                 <div class="selo">
                     <span class="selo__icone">🌿</span>
-                    <h3 class="selo__titulo">Aliado do Aço Verde</h3>
-                    <p class="selo__mensagem">
+                    <h3 class="selo__titulo" data-i18n="selo-titulo">Aliado do Aço Verde</h3>
+                    <p class="selo__mensagem" data-i18n="selo-mensagem">
                         Juntos por um futuro melhor.
                         Sua empresa deu o primeiro passo.
                     </p>
@@ -189,27 +192,27 @@
         <div class="footer__topo">
 
             <div class="footer__marca">
-                <span class="footer__logo">Aço Verde</span>
-                <span class="footer__tagline">
+                <span class="footer__logo" data-i18n="footer-logo">Aço Verde</span>
+                <span class="footer__tagline" data-i18n="footer-tagline">
                     Uma iniciativa ArcelorMittal · XCarb®
                 </span>
             </div>
 
             <div class="footer__externo">
-                <p class="footer__externo-titulo">Saiba mais</p>
+                <p class="footer__externo-titulo" data-i18n="footer-saiba">Saiba mais</p>
                 <a href="https://conexao.arcelormittal.com.br/produtos/produtos-xcarb" target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer" data-i18n="footer-link-xcarb">
                     Programa XCarb® oficial
                 </a>
                 <a href="https://brasil.arcelormittal.com/assets/pdf/arcelormittal/publications-reports/relatorio-de-sustentabilidade-2024.pdf"
-                    target="_blank" rel="noopener noreferrer">
+                    target="_blank" rel="noopener noreferrer" data-i18n="footer-link-relatorio">
                     Relatório de Sustentabilidade 2024
                 </a>
             </div>
 
         </div>
 
-        <p class="footer__credito">
+        <p class="footer__credito" data-i18n="footer-credito">
             © 2025 · Desenvolvido por <span>Thaislaine Erica</span>
         </p>
     </footer>
