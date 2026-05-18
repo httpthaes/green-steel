@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="assets/js/app.js" defer></script>
+    <script src="src/js/app.js" defer></script>
     <title>Aço Verde | ArcelorMittal · XCarb®</title>
 </head>
 
@@ -22,16 +22,26 @@
             <li><a href="#problema" data-i18n="nav-problema">O problema</a></li>
             <li><a href="#arcelormittal">ArcelorMittal</a></li>
             <li><a href="#xcarb">XCarb®</a></li>
-            <li><a href="#contato" class="navbar__btn" data-i18n="nav-contato">Saber mais →</a></li>
+            <li><a href="#contato" data-i18n="nav-contato">Contato</a></li>
         </ul>
 
         <!-- Alternar tema e idioma -->
         <div class="navbar__theme-lang">
+
             <button id="btn-tema" aria-label="Alternar tema" title="Alternar tema">
                 <i class="fa-regular fa-moon" style="color: #bebebe;"></i>
             </button>
 
-            <button id="btn-lang">EN | PT</button>
+            <div class="lang-toggle" id="btn-lang">
+                <span class="lang-toggle__option inativo" id="btn-toggle__en">
+                    EN
+                </span>
+
+                <span class="lang-toggle__option" id="btn-toggle__pt">
+                    PT
+                </span>
+            </div>
+            
         </div>
 
     </nav>
@@ -95,20 +105,28 @@
 
         <!-- ========== SEÇÃO: ARCELORMITTAL ========== -->
         <section class="secao" id="arcelormittal">
-            <div class="arcelormittal__conteudo">
-                <h2 data-i18n="arcelormittal-titulo">Quem está agindo?</h2>
-                <p data-i18n="arcelormittal-descricao">
-                    ArcelorMittal é a maior produtora de aço no Brasil e na América Latina e lidera
-                    a transição para uma economia de baixo carbono, com investimentos em inovação e
-                    projetos ESG.
-                    Como parte dessa atuação, a meta é de zero emissão líquida de CO2 em todo o grupo
-                    ArcelorMittal até 2050, em alinhamento com o Acordo de Paris, tratado internacional
-                    de combate às mudanças climáticas.
-                </p>
-            </div>
+            <div class="arcelormittal__container">
+                <div class="arcelormittal__textos">
+                    <span class="arcelormittal__label">ABOUT US</span>
+                    <h2 data-i18n="arcelormittal-titulo">Quem está agindo?</h2>
+                    <p data-i18n="arcelormittal-descricao">
+                        ArcelorMittal é a maior produtora de aço no Brasil e na América Latina e lidera
+                        a transição para uma economia de baixo carbono, com investimentos em inovação e
+                        projetos ESG.
+                        Como parte dessa atuação, a meta é de zero emissão líquida de CO2 em todo o grupo
+                        ArcelorMittal até 2050, em alinhamento com o Acordo de Paris, tratado internacional
+                        de combate às mudanças climáticas.
+                    </p>
 
-            <div class="arcelormittal__img">
-                <img src="assets/img/arcelormittal.jpg" alt="" width="200">
+                    <a href="https://brasil.arcelormittal.com/arcelormittal-brasil/quem-somos"
+                        class="arcelormittal__btn" target="_blank" rel="noopener noreferrer">
+                        Saiba mais →
+                    </a>
+                </div>
+
+                <div class="arcelormittal__img">
+                    <img src="/src/assets/arcelormittal.jpg" alt="Fábrica ArcelorMittal" width="200">
+                </div>
             </div>
         </section>
 
@@ -126,9 +144,12 @@
             <div class="xcarb__filtros">
                 <button class="filtro__btn ativo" data-filtro="todos" data-i18n="filtro-todos">Todos</button>
                 <button class="filtro__btn" data-filtro="energia" data-i18n="filtro-energia">Energia Renovável</button>
-                <button class="filtro__btn" data-filtro="reciclagem" data-i18n="filtro-reciclagem">Economia Circular</button>
-                <button class="filtro__btn" data-filtro="emissoes" data-i18n="filtro-emissoes">Neutralização de Carbono</button>
-                <button class="filtro__btn" data-filtro="inovacao" data-i18n="filtro-inovacao">Inovação Tecnológica</button>
+                <button class="filtro__btn" data-filtro="reciclagem" data-i18n="filtro-reciclagem">Economia
+                    Circular</button>
+                <button class="filtro__btn" data-filtro="emissoes" data-i18n="filtro-emissoes">Neutralização de
+                    Carbono</button>
+                <button class="filtro__btn" data-filtro="inovacao" data-i18n="filtro-inovacao">Inovação
+                    Tecnológica</button>
             </div>
             <div class="xcarb__grid"></div>
 
@@ -136,7 +157,8 @@
             <div class="xcarb__produtos">
                 <div class="produtos__intro">
                     <h2 data-i18n="produtos-titulo">Conheça os produtos</h2>
-                    <p data-i18n="produtos-descricao">Entre os produtos desenvolvidos com a tecnologia XCarb®, destacam-se:</p>
+                    <p data-i18n="produtos-descricao">Entre os produtos desenvolvidos com a tecnologia XCarb®,
+                        destacam-se:</p>
                 </div>
 
                 <div class="carrossel">
@@ -164,11 +186,13 @@
             <form id="form-contato" novalidate>
                 <div class="form__grupo">
                     <label for="nome" data-i18n="form-nome">Nome</label>
-                    <input type="text" id="nome" name="nome" data-i18n-placeholder="form-nome-placeholder" placeholder="Seu nome">
+                    <input type="text" id="nome" name="nome" data-i18n-placeholder="form-nome-placeholder"
+                        placeholder="Seu nome">
                 </div>
                 <div class="form__grupo">
                     <label for="email" data-i18n="form-email">E-mail corporativo</label>
-                    <input type="email" id="email" name="email" data-i18n-placeholder="form-email-placeholder" placeholder="seu@empresa.com">
+                    <input type="email" id="email" name="email" data-i18n-placeholder="form-email-placeholder"
+                        placeholder="seu@empresa.com">
                 </div>
                 <button type="submit" data-i18n="form-submit">Vamos nessa!</button>
             </form>
