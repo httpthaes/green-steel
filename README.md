@@ -14,7 +14,7 @@ A proposta é apresentar às empresas uma alternativa mais sustentável ao aço 
 
 ## Sobre o projeto
 
-A aplicação simula uma landing page corporativa voltada para apresentação de soluções sustentáveis da ArcelorMittal, utilizando recursos modernos de desenvolvimento front-end.
+A aplicação simula uma landing page corporativa da ArcelorMittal, implementada com recursos modernos de desenvolvimento front-end.
 
 Entre as funcionalidades implementadas estão:
 
