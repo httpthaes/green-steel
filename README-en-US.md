@@ -14,7 +14,7 @@ The goal is to offer companies a more sustainable alternative to traditional ste
 
 ## About the Project
 
-The application simulates a corporate landing page built to showcase ArcelorMittal’s sustainable solutions using modern front-end development practices.
+The application simulates an ArcelorMittal corporate landing page, implemented with modern front-end features.
 
 Key features include:
 
