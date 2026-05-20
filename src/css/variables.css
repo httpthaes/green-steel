@@ -1,0 +1,19 @@
+:root {
+  /* ── Cores ── */
+  --verde-escuro:  #0f2d1f;
+  --verde-musgo:   #1a3d2b;
+  --verde-claro:  #52b788;
+  --cinza-aco: #4a4a4a;
+  --ambar:   #d4a843;
+
+  /* ── Tema escuro (padrão) ── */
+  --bg: #0a1f14;
+  --bg-card:   #132a1c;
+  --texto:   #e8ede9;
+  --texto-suave:   rgba(244, 241, 235, 0.75);
+  --borda:   rgba(82, 183, 136, 0.15);
+
+  /* ── Tipografia ── */
+  --fonte-titulo:  "Playfair Display", serif;
+  --fonte-corpo:   "Montserrat", sans-serif;;
+}

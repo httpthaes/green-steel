@@ -1,0 +1,39 @@
+@media (max-width: 900px) {
+
+  .arcelormittal__container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .arcelormittal__imagem img {
+    max-width: 100%;
+  }
+
+  .topbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .topbar__nav {
+    display: none;
+  }
+
+  .topbar__logo-titulo {
+    font-size: 1.2rem;
+  }
+
+  .hero__dado {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 3rem;
+    text-align: left;
+    border-right: none;
+    border-left: 2px solid var(--verde-claro);
+    padding-left: 1rem;
+  }
+
+  .hero__scroll span {
+    display: none;
+  }
+}
