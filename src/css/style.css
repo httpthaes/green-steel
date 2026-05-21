@@ -51,13 +51,13 @@ body.tema-claro {
 
 .topbar__logo-titulo {
   font-family: var(--fonte-titulo);
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
   line-height: 1;
 }
 
 .topbar__logo-sub {
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 2vw, 0.75rem);
   font-weight: 300;
   color: var(--verde-claro);
   margin-top: 0.7rem;
@@ -65,10 +65,14 @@ body.tema-claro {
   text-transform: uppercase;
 }
 
+.topbar__menu-bar {
+  display: none;
+}
+
 .topbar__nav {
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: clamp(1rem, 4vw, 4rem);
   padding: 0 2rem;
 }
 
@@ -150,27 +154,29 @@ body.tema-claro {
 /* HERO */
 
 .hero {
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 3rem 5rem;
-  overflow: hidden;
-}
+  padding: 10rem 4rem 4rem;
 
-.hero__bg {
-  position: absolute;
-  inset: 0;
+  display: flex;
+  align-items: flex-end;
+
   background:
     linear-gradient(to bottom,
       rgba(10, 25, 16, 0.45) 0%,
       rgba(10, 25, 16, 0.70) 60%,
       rgba(10, 25, 16, 0.92) 100%),
-    url('../assets/industria.jpg') center/cover no-repeat;
+    url('../assets/industria.jpg') center/cover no-repeat;;
 }
 
-#hero__subtitulo__arcelormittal {
-  font-weight: 700;
+.hero__wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4rem;
 }
 
 .hero__conteudo {
@@ -181,7 +187,7 @@ body.tema-claro {
 
 .hero__label {
   display: inline-block;
-  font-size: clamp(0.75rem, 1vw, 0.95rem);
+  font-size: clamp(0.55rem, 1vw, 0.95rem);
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -191,8 +197,8 @@ body.tema-claro {
 
 .hero__titulo {
   font-family: var(--fonte-titulo);
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-  line-height: 1.12;
+  font-size: clamp(2rem, 5.5vw, 4.2rem);
+  line-height: 1.05;
   color: var(--branco);
   margin-bottom: 1.4rem;
 }
@@ -203,7 +209,7 @@ body.tema-claro {
 }
 
 .hero__subtitulo {
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(0.85rem, 2vw, 1.35rem);
   font-weight: 400;
   color: var(--texto-claro);
   line-height: 1.8;
@@ -220,14 +226,14 @@ body.tema-claro {
 }
 
 .hero__dado {
-  position: absolute;
-  right: 3rem;
-  bottom: 5rem;
-  z-index: 2;
+  max-width: 260px;
+
   text-align: right;
+
   border-right: 2px solid var(--verde-claro);
   padding-right: 1.2rem;
-  max-width: 260px;
+
+  flex-shrink: 0;
 }
 
 .hero__dado-numero {
