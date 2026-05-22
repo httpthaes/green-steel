@@ -48,10 +48,8 @@
 }
 
 .secao {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  padding: 6rem 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--texto-suave);
-  letter-spacing: 0.08em;
 }

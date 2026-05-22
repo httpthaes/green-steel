@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import './reset.css';
-@import './variables.css';
-@import './patterns.css';
-@import './responsive.css';
 
 body {
   font-family: var(--fonte-corpo);
@@ -157,10 +153,8 @@ body.tema-claro {
   position: relative;
   min-height: 100vh;
   padding: 10rem 4rem 4rem;
-
   display: flex;
   align-items: flex-end;
-
   background:
     linear-gradient(to bottom,
       rgba(10, 25, 16, 0.45) 0%,
@@ -227,12 +221,9 @@ body.tema-claro {
 
 .hero__dado {
   max-width: 260px;
-
   text-align: right;
-
   border-right: 2px solid var(--verde-claro);
   padding-right: 1.2rem;
-
   flex-shrink: 0;
 }
 
@@ -246,7 +237,7 @@ body.tema-claro {
 
 .hero__dado-label {
   margin-top: 0.8rem;
-  font-size: clamp(0.95rem, 1.1vw, 1rem);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
 }
@@ -302,7 +293,6 @@ body.tema-claro {
 }
 
 
-
 /* Seção: arcelormittal */
 
 #arcelormittal {
@@ -345,7 +335,7 @@ body.tema-claro {
 .arcelormittal__textos p {
   color: var(--texto-suave);
   line-height: 1.8;
-  font-size: 1.2rem;
+  font-size: clamp(0.75rem, 2vw, 1.2rem);
   margin-bottom: 2rem;
 }
 

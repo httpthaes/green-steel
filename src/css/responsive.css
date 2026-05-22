@@ -12,9 +12,15 @@
   }
 
   .topbar__menu-bar {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
     display: block;
   }
 
+  .topbar__menu-bar img {
+  width: 2rem;
+}
 
   .hero {
     padding: 8rem 1.5rem 3rem;
@@ -27,13 +33,11 @@
   }
 
   .hero__dado {
-    text-align: left;
     border-right: none;
     border-left: 2px solid var(--verde-claro);
-    padding-right: 0;
     padding-left: 1rem;
+    margin-bottom: 3rem;
   }
-
 
   .hero__scroll span {
     display: none;
@@ -47,5 +51,20 @@
 
   .arcelormittal__imagem img {
     max-width: 100%;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline li {
+    width: 100%;
+    padding: 0 1rem 0 5rem;
+    left: 0 !important;
+    text-align: left;
+  }
+
+  .timeline li::before {
+    left: 11px !important;
   }
 }
