@@ -7,17 +7,23 @@
     text-align: center;
 }
 
-#problema h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 1.5rem;
-    color: white;
+.problema__label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--verde-claro);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .problema__descricao {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.9;
+  color: rgba(255,255,255,0.82);
+  letter-spacing: 0.02em;
 }
 
 /* container */
@@ -26,7 +32,7 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 /* linha central */

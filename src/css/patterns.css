@@ -47,6 +47,13 @@
   font-size: 1rem;
 }
 
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
 .secao {
   width: 100%;
   padding: 6rem 2rem;

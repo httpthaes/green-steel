@@ -325,13 +325,6 @@ body.tema-claro {
   margin-bottom: 1rem;
 }
 
-.arcelormittal__textos h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.1;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
 .arcelormittal__textos p {
   color: var(--texto-suave);
   line-height: 1.8;
