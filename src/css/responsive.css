@@ -32,13 +32,6 @@
     gap: 3rem;
   }
 
-  .hero__dado {
-    border-right: none;
-    border-left: 2px solid var(--verde-claro);
-    padding-left: 1rem;
-    margin-bottom: 3rem;
-  }
-
   .hero__scroll span {
     display: none;
   }

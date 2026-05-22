@@ -219,29 +219,6 @@ body.tema-claro {
   flex-wrap: wrap;
 }
 
-.hero__dado {
-  max-width: 260px;
-  text-align: right;
-  border-right: 2px solid var(--verde-claro);
-  padding-right: 1.2rem;
-  flex-shrink: 0;
-}
-
-.hero__dado-numero {
-  font-family: var(--fonte-titulo);
-  font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 700;
-  line-height: 0.9;
-  color: white;
-}
-
-.hero__dado-label {
-  margin-top: 0.8rem;
-  font-size: clamp(0.85rem, 1.1vw, 1rem);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
-}
-
 .hero__scroll {
   position: absolute;
   bottom: 2rem;
