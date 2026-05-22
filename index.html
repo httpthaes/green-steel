@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/patterns.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/timeline.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="src/js/app.js" defer></script>
     <title>Aço Verde | ArcelorMittal · XCarb®</title>
@@ -47,7 +52,7 @@
                     </div>
                 </div>
                 <div class="topbar__menu-bar">
-                    <img src="src/assets/menu-icon.png" alt="menu icon">
+                    <i class="fa-solid fa-bars" style="color: #bebebe;"></i>
                 </div>
             </div>
         </header>
@@ -101,13 +106,13 @@
             <!-- ========== SEÇÃO: PROBLEMA / TIMELINE ========== -->
             <section class="secao" id="problema">
                 <h2 data-i18n="problema-titulo">A escalada do CO₂</h2>
-                <p data-i18n="problema-descricao">
+                <p class="problema__descricao" data-i18n="problema-descricao">
                     Desde a Revolução Industrial, a concentração de CO₂ na atmosfera cresceu 52%.
                     O que levou milênios para acumular, a indústria fez em 170 anos.
                 </p>
 
                 <!-- Timeline gerada dinamicamente pelo JavaScript -->
-                <div id="timeline" role="list"></div>
+                <ul class="timeline" id="timeline"></ul>
             </section>
 
             <!-- ========== SEÇÃO: ARCELORMITTAL ========== -->
