@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/patterns.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/timeline.css">
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="src/js/app.js" defer></script>
@@ -28,9 +27,9 @@
                 <!-- Navegação -->
                 <nav aria-label="Navegação principal">
                     <ul class="topbar__nav" role="list">
-                        <li><a href="#problema" data-i18n="nav-problema">O problema</a></li>
-                        <li><a href="#arcelormittal">ArcelorMittal</a></li>
+                        <li><a href="#impacto" data-i18n="nav-problema">Impacto</a></li>
                         <li><a href="#xcarb">XCarb®</a></li>
+                        <li><a href="#arcelormittal">ArcelorMittal</a></li>
                         <li><a href="#contato" data-i18n="nav-contato">Contato</a></li>
                     </ul>
                 </nav>
@@ -62,27 +61,15 @@
             <section class="hero" id="topo">
                 <div class="hero__wrapper">
                     <div class="hero__conteudo">
-                        <span class="hero__label" data-i18n="hero-label">Indústria · Clima · Transformação</span>
-
                         <h1 class="hero__titulo" data-i18n="hero-titulo">
                             O aço está em tudo.<br>
                             <em>Como ele é feito</em><br>
                             importa mais do que você imagina.
                         </h1>
 
-                        <p class="hero__subtitulo" data-i18n="hero-subtitulo">
-                            A indústria do aço responde por
-                            8% das emissões globais de CO₂.
-                            Conheça o problema, entenda a escala, e descubra como a <span>ArcelorMittal</span> está
-                            construindo
-                            outro caminho.
-                        </p>
-
-                        <div class="hero__acoes">
+                        <div class="hero__btn">
                             <a href="#arcelormittal" class="btn-primario" data-i18n="hero-btn-primario">Conheça a
                                 ArcelorMittal</a>
-                            <a href="#problema" class="btn-secundario" data-i18n="hero-btn-secundario">Entenda o
-                                problema</a>
                         </div>
                     </div>
                 </div>
@@ -94,18 +81,56 @@
                 </div>
 
             </section>
-            <!-- ========== SEÇÃO: PROBLEMA / TIMELINE ========== -->
-            <section class="secao" id="problema">
-                <span class="problema__label" data-i18n="problema-label">
-                    CRISE CLIMÁTICA
-                </span>
-                <h2 data-i18n="problema-titulo">A escalada do CO₂</h2>
-                <p class="problema__descricao" data-i18n="problema-descricao">
-                    Em apenas 170 anos, a indústria elevou o CO₂ atmosférico em 52%.
-                </p>
 
-                <!-- Timeline gerada dinamicamente pelo JavaScript -->
-                <ul class="timeline" id="timeline"></ul>
+            <!-- ========== IMPACTO / DADOS ========== -->
+            <section class="secao" id="impacto">
+
+                <div class="impacto__intro">
+                    <h2>
+                        O impacto da indústria não pode mais ser ignorado.
+                    </h2>
+                    <p class="subtitulo">
+                        A produção de aço está entre as maiores fontes industriais
+                        de CO₂ do planeta. Reduzir esse impacto se tornou
+                        uma prioridade global.
+                    </p>
+                </div>
+
+                <div class="impacto__grid"></div>
+
+            </section>
+
+            <!-- ========== SEÇÃO: XCARB ========== -->
+            <section class="secao" id="xcarb">
+
+                <!-- INTRO -->
+                <div class="xcarb__intro">
+                    <h2>
+                        O aço do futuro já existe.
+                    </h2>
+
+                    <p class="subtitulo">
+                        Produtos produzidos com aço reciclado e energia renovável
+                        para reduzir emissões sem comprometer desempenho.
+                    </p>
+                </div>
+
+                <!-- TABS -->
+                <div class="xcarb__tabs">
+                    <button class="xcarb__tab ativo">
+                        Vergalhão 50 S XCarb®
+                    </button>
+                    <button class="xcarb__tab">
+                        Cantoneira XCarb®
+                    </button>
+                    <button class="xcarb__tab">
+                        Barra Chata Mola XCarb®
+                    </button>
+
+                </div>
+
+                <!-- SHOWCASE -->
+                <div class="xcarb__showcase"></div>
             </section>
 
             <!-- ========== SEÇÃO: ARCELORMITTAL ========== -->
@@ -113,14 +138,11 @@
                 <div class="arcelormittal__container">
                     <div class="arcelormittal__textos">
                         <span class="arcelormittal__label" data-i18n="arcelormittal-label">SOBRE NÓS</span>
-                        <h2 data-i18n="arcelormittal-titulo">Quem está agindo?</h2>
+                        <h2 data-i18n="arcelormittal-titulo">Por trás do XCarb®</h2>
                         <p data-i18n="arcelormittal-descricao">
-                            ArcelorMittal é a maior produtora de aço no Brasil e na América Latina e lidera
-                            a transição para uma economia de baixo carbono, com investimentos em inovação e
-                            projetos ESG.
-                            Como parte dessa atuação, a meta é de zero emissão líquida de CO2 em todo o grupo
-                            ArcelorMittal até 2050, em alinhamento com o Acordo de Paris, tratado internacional
-                            de combate às mudanças climáticas.
+                            A transição para uma siderurgia de baixo carbono
+                            já começou — e a ArcelorMittal aposta nisso
+                            como parte do futuro da indústria.
                         </p>
 
                         <a href="https://brasil.arcelormittal.com/arcelormittal-brasil/quem-somos"
@@ -135,60 +157,12 @@
                 </div>
             </section>
 
-            <!-- ========== SEÇÃO: XCARB ========== -->
-            <section class="secao" id="xcarb">
-                <div class="xcarb__intro">
-                    <h2 data-i18n="xcarb-titulo">E se o aço que move o mundo parasse de destruí-lo?</h2>
-                    <p data-i18n="xcarb-descricao">
-                        O XCarb® é a resposta da ArcelorMittal a essa pergunta. Um programa inteiro pensado
-                        para provar que isso é possível. Explore e descubra como.
-                    </p>
-                </div>
-
-                <!-- Filtros: controlam quais cards aparecem no grid -->
-                <div class="xcarb__filtros">
-                    <button class="filtro__btn ativo" data-filtro="todos" data-i18n="filtro-todos">Todos</button>
-                    <button class="filtro__btn" data-filtro="energia" data-i18n="filtro-energia">Energia
-                        Renovável</button>
-                    <button class="filtro__btn" data-filtro="reciclagem" data-i18n="filtro-reciclagem">Economia
-                        Circular</button>
-                    <button class="filtro__btn" data-filtro="emissoes" data-i18n="filtro-emissoes">Neutralização de
-                        Carbono</button>
-                    <button class="filtro__btn" data-filtro="inovacao" data-i18n="filtro-inovacao">Inovação
-                        Tecnológica</button>
-                </div>
-                <div class="xcarb__grid"></div>
-
-                <!-- Carrossel de produtos -->
-                <div class="xcarb__produtos">
-                    <div class="produtos__intro">
-                        <h2 data-i18n="produtos-titulo">Conheça os produtos</h2>
-                        <p data-i18n="produtos-descricao">Entre os produtos desenvolvidos com a tecnologia XCarb®,
-                            destacam-se:</p>
-                    </div>
-
-                    <div class="carrossel">
-                        <div class="carrossel__track"></div>
-
-                        <button class="carrossel__btn carrossel__btn--prev" aria-label="Produto anterior"
-                            title="Produto anterior" data-i18n-aria="carr-prev">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button class="carrossel__btn carrossel__btn--next" aria-label="Próximo produto"
-                            title="Próximo produto" data-i18n-aria="carr-next">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </button>
-
-                        <div class="carrossel__dots"></div>
-                    </div>
-                </div>
-            </section>
-
             <!-- ========== SEÇÃO: CONTATO ========== -->
             <section class="secao" id="contato">
+
                 <h2 data-i18n="contato-titulo">A ArcelorMittal não esperou o futuro chegar para agir. E você?</h2>
                 <p data-i18n="contato-descricao">Preencha o formulário e receba um e-mail com mais informações.</p>
-
+                
                 <form id="form-contato" novalidate>
                     <div class="form__grupo">
                         <label for="nome" data-i18n="form-nome">Nome</label>
@@ -243,7 +217,7 @@
             </div>
 
             <p class="footer__credito" data-i18n="footer-credito">
-                © 2025 · Desenvolvido por <span>Thaislaine Erica</span>
+                © 2026 · Todos os direitos reservados.
             </p>
         </footer>
     </div>
