@@ -19,8 +19,8 @@
   }
 
   .topbar__menu-bar img {
-  width: 2rem;
-}
+    width: 2rem;
+  }
 
   .hero {
     padding: 8rem 1.5rem 3rem;
@@ -46,7 +46,12 @@
     max-width: 100%;
   }
 
+  .form__grupo {
+    display: flex;
+    flex-direction: column;
+  }
+
   .footer__topo {
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }

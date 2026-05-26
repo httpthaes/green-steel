@@ -28,29 +28,28 @@
 }
 
 .btn-secundario {
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.88);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: 0.3s;
+  padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--verde-claro);
+    color: #08110c;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
 }
 
 .btn-secundario:hover {
-  color: #fff;
-  transform: translateY(3px);
-}
-
-.btn-secundario::after {
-  content: '↓';
-  font-size: 1rem;
+  transform: translateY(-2px);
+  opacity: 0.9;
+  background: var(--ambar);
 }
 
 h2 {
     margin-bottom: 1.5rem;
-    color: white;
-    font-size: clamp(1rem, 3vw, 2rem);
+    color: #fff;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     line-height: 1.1;
 }
 

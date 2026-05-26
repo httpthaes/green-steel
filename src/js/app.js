@@ -17,10 +17,10 @@ btnTema.addEventListener('click', () => {
 
 
 // Navbar escurece ao rolar
-const navbar = document.querySelector('.navbar');
+const topbar = document.querySelector('.topbar');
 
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    topbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
 // Toggle linguagem
@@ -42,7 +42,7 @@ btnLang.forEach(() => {
     })
 })
 
-// dados
+// Dados de impacto
 
 const container = document.querySelector('.impacto__grid')
 
@@ -74,5 +74,5 @@ dados.forEach((dado) => {
         `
 })
 
+// Produtos xcarb
 
-// produtos xcarb

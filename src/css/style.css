@@ -68,7 +68,7 @@ body.tema-claro {
 .topbar__nav {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 4vw, 4rem);
+  gap: 4rem;
   padding: 0 2rem;
 }
 
@@ -83,23 +83,6 @@ body.tema-claro {
 .topbar__nav a:hover {
   color: var(--texto);
 }
-
-.topbar__btn {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--verde-escuro) !important;
-  background: var(--verde-claro);
-  padding: 0.9rem 1.8rem;
-  border-radius: 999px;
-  letter-spacing: 0.05em;
-  transition: 0.3s;
-}
-
-.topbar__btn:hover {
-  background: var(--ambar) !important;
-  transform: translateY(-2px);
-}
-
 
 .topbar__theme-lang {
   display: flex;
@@ -160,7 +143,8 @@ body.tema-claro {
       rgba(10, 25, 16, 0.45) 0%,
       rgba(10, 25, 16, 0.70) 60%,
       rgba(10, 25, 16, 0.92) 100%),
-    url('../assets/industria.jpg') center/cover no-repeat;;
+    url('../assets/industria.jpg') center/cover no-repeat;
+  ;
 }
 
 .hero__wrapper {
@@ -190,13 +174,6 @@ body.tema-claro {
 .hero__titulo em {
   font-style: italic;
   color: var(--verde-claro);
-}
-
-.hero__btn {
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-  flex-wrap: wrap;
 }
 
 .hero__scroll {
@@ -243,63 +220,57 @@ body.tema-claro {
 /* Seção: impacto */
 
 #impacto {
-    position: relative;
-    overflow: hidden;
-    background:
-        linear-gradient(
-            to bottom,
-            #07110c,
-            #081711
-        );
-    text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      #07110c,
+      #081711);
+  text-align: center;
 }
 
 .impacto__intro,
 .xcarb__intro {
-    max-width: 850px;
-    margin: 0 auto 6rem;
+  max-width: 850px;
+  margin: 0 auto 6rem;
 }
 
 .impacto__grid {
-    display: grid;
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(220px, 1fr)
-        );
-    gap: 2rem;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit,
+      minmax(220px, 1fr));
+  gap: 2rem;
 }
 
 .impacto__card {
-    position: relative;
-    padding: 2rem 1rem;
-    border-top:
-        1px solid rgba(120,255,180,0.18);
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,0.02),
-            transparent
-        );
+  position: relative;
+  padding: 2rem 1rem;
+  border-top:
+    1px solid rgba(120, 255, 180, 0.18);
+  background:
+    linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.02),
+      transparent);
 }
 
 .impacto__dado {
-    display: block;
-    margin-bottom: 1rem;
-    color: var(--verde-claro);
-    font-size: clamp(2.5rem, 4vw, 3rem);
-    font-weight: 700;
-    line-height: 1;
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--verde-claro);
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
 }
 
 .impacto__card p {
-    max-width: 240px;
-    margin: 0 auto;
+  max-width: 240px;
+  margin: 0 auto;
 
-    font-size: 1rem;
-    line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.7;
 
-    color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Seção: XCarb */
@@ -315,42 +286,43 @@ body.tema-claro {
 .xcarb__tabs {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .xcarb__tabs {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .xcarb__tab {
-    padding: 0.9rem 1.2rem;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 999px;
-    background: transparent;
-    color: rgba(255,255,255,0.65);
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .xcarb__tab:hover {
-    border-color: rgba(120,255,180,0.25);
+  border-color: rgba(120, 255, 180, 0.25);
 
-    color: white;
+  color: white;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .xcarb__tab.ativo {
-    background: rgba(120,255,180,0.08);
-    border-color: rgba(120,255,180,0.3);
-    color: var(--verde-claro);
+  background: rgba(120, 255, 180, 0.08);
+  border-color: rgba(120, 255, 180, 0.3);
+  color: var(--verde-claro);
 }
 
 /* Seção: arcelormittal */
@@ -391,23 +363,6 @@ body.tema-claro {
   margin-bottom: 2rem;
 }
 
-.arcelormittal__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--verde-claro);
-  color: var(--verde-escuro);
-  padding: 0.9rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.arcelormittal__btn:hover {
-  transform: translateY(-2px);
-  background: var(--ambar);
-}
-
 .arcelormittal__img {
   flex: 1;
   display: flex;
@@ -428,122 +383,105 @@ body.tema-claro {
   text-align: center;
 }
 
-.contato__intro p {
-    color: rgba(255,255,255,0.7);
-    line-height: 1.7;
+#contato p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
 #form-contato {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .form__grupo input {
-    width: 260px;
-    padding: 1rem 1.2rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.03);
-    color: white;
-}
-
-#form-contato button {
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 999px;
-    background: var(--verde-claro);
-    color: #08110c;
-    font-weight: 700;
-    cursor: pointer;
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
-}
-
-#form-contato button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+  width: 260px;
+  padding: 1rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: white;
 }
 
 /* footer */
 
 footer {
-    padding: 4rem 2rem 2rem;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    background: #08110c;
+  padding: 4rem 2rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: #08110c;
 }
 
 .footer__topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
 }
 
 .footer__marca {
-    max-width: 420px;
+  max-width: 420px;
 }
 
 .footer__logo {
-    display: block;
+  display: block;
 
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 
-    color: white;
+  color: white;
 
-    font-size: 1.1rem;
-    font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .footer__tagline {
-    color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
 
-    line-height: 1.7;
+  line-height: 1.7;
 
-    font-size: 0.95rem;
+  font-size: 0.95rem;
 }
 
 .footer__externo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
 }
 
 .footer__externo-titulo {
-    color: white;
+  color: white;
 
-    font-size: 0.9rem;
-    font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 600;
 
-    margin-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 .footer__externo a {
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer__externo a:hover {
-    color: var(--verde-claro);
+  color: var(--verde-claro);
 }
 
 .footer__credito {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    color: rgba(255,255,255,0.4);
-    font-size: 0.9rem;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .footer__credito span {
-    color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
