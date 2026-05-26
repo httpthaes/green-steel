@@ -45,6 +45,13 @@
   .arcelormittal__imagem img {
     max-width: 100%;
   }
+  
+  #form-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .form__grupo {
     display: flex;
