@@ -76,9 +76,6 @@ dados.forEach((dado) => {
 
 // Produtos xcarb
 
-const tabs = document.querySelectorAll('.xcarb__tab');
-const showcase = document.querySelector('.xcarb__showcase');
-
 const produtos = [
 
     {
@@ -172,6 +169,9 @@ const produtos = [
     }
 ]
 
+const tabs = document.querySelectorAll('.xcarb__tab');
+const showcase = document.querySelector('.xcarb__showcase');
+
 function renderizarProduto(index) {
     const statsHTML = produtos[index].stats
         .map(stat => `
@@ -202,6 +202,13 @@ function renderizarProduto(index) {
 
 tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
+
+        tabs.forEach(btn => {
+            btn.classList.remove('ativo')
+        })
+
+        tab.classList.add('ativo')
+
         renderizarProduto(index)
     })
 })
