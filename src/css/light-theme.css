@@ -1,0 +1,11 @@
+body.tema-claro {
+  --bg: #f2f8f2;
+  --bg-impacto: #f2f8f2;
+  --bg-card: transparent;
+  --cor-secundaria: #0c5210;
+  --texto: #525252;
+
+  --bg-tab: rgba(120, 255, 180, 0.08);
+  --borda-tab: 1px solid rgba(255, 255, 255, 0.08);
+  --texto-tab: rgba(255, 255, 255, 0.65);
+}

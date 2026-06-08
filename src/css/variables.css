@@ -1,19 +1,21 @@
 :root {
-  /* ── Cores ── */
-  --verde-escuro:  #0f2d1f;
-  --verde-musgo:   #1a3d2b;
   --verde-claro:  #52b788;
-  --cinza-aco: #4a4a4a;
-  --ambar:   #d4a843;
+  --ambar: #d4a843;
 
-  /* ── Tema escuro (padrão) ── */
   --bg: #0a1f14;
-  --bg-card:   #132a1c;
-  --texto:   #e8ede9;
-  --texto-suave:   rgba(244, 241, 235, 0.75);
-  --borda:   rgba(82, 183, 136, 0.15);
+  --bg-card: #132a1c;
+  --bg-impacto: linear-gradient(to bottom,
+      #07110c,
+      #081711);
+  --cor-primaria: #e8ede9;
+  --cor-secundaria: #fff;
+  --texto: rgba(244, 241, 235, 0.75);
+  --borda: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-  /* ── Tipografia ── */
+  --bg-tab: rgba(120, 255, 180, 0.08);
+  --borda-tab: rgba(120, 255, 180, 0.25);
+  --texto-tab: rgba(255, 255, 255, 0.65);
+
   --fonte-titulo: "Playfair Display", serif;
   --fonte-corpo: "Manrope", sans-serif;
 }

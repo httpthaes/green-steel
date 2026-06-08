@@ -8,11 +8,6 @@ body {
   color: var(--texto);
 }
 
-body.tema-claro {
-  --bg: #f4f7f5;
-  --texto: #0f2d1f;
-}
-
 /* TOPBAR */
 
 .topbar {
@@ -25,7 +20,7 @@ body.tema-claro {
   align-items: center;
   justify-content: space-between;
   padding: 1.3rem 2rem;
-  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  transition: 0.4s ease, backdrop-filter 0.4s ease;
   background: rgba(10, 25, 16, 0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -46,6 +41,7 @@ body.tema-claro {
 }
 
 .topbar__logo-titulo {
+  color: var(--cor-primaria);
   font-family: var(--fonte-titulo);
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
@@ -79,7 +75,7 @@ body.tema-claro {
 }
 
 .topbar__nav a:hover {
-  color: var(--texto);
+  color: var(--cor-primaria);
 }
 
 .topbar__theme-lang {
@@ -176,7 +172,7 @@ body.tema-claro {
   font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: 0.95;
   font-weight: 600;
-  color: #fff;
+  color: var(--cor-primaria);
 }
 
 .hero__titulo em {
@@ -240,17 +236,14 @@ body.tema-claro {
 #impacto {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(to bottom,
-      #07110c,
-      #081711);
+  background: var(--bg-impacto);
   text-align: center;
 }
 
 .impacto__intro,
 .xcarb__intro {
   max-width: 850px;
-  margin: 0 auto 6rem;
+  margin: 0 auto 4rem;
 }
 
 .impacto__grid {
@@ -284,11 +277,9 @@ body.tema-claro {
 .impacto__card p {
   max-width: 240px;
   margin: 0 auto;
-
   font-size: 1rem;
   line-height: 1.7;
-
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--texto);
 }
 
 /* Seção: XCarb */
@@ -303,7 +294,7 @@ body.tema-claro {
 
 .xcarb__tabs {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -313,7 +304,7 @@ body.tema-claro {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--texto-tab);
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
@@ -325,10 +316,8 @@ body.tema-claro {
 }
 
 .xcarb__tab:hover {
-  border-color: rgba(120, 255, 180, 0.25);
-
-  color: white;
-
+  border-color: var(--borda-tab);
+  font-weight: 500;
   transform: translateY(-1px);
 }
 
@@ -338,11 +327,76 @@ body.tema-claro {
   color: var(--verde-claro);
 }
 
-/* Seção: arcelormittal */
-
-#arcelormittal {
-  padding: 6rem 2rem;
+.xcarb__showcase {
+  max-width: 1200px;
+  margin-top: 5rem;
 }
+
+.xcarb__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.xcarb__card img {
+  width: 100%;
+  height: 400px;
+  max-width: 600px;
+  object-fit: cover;
+}
+
+.xcarb__text h3 {
+  font-size: 1.5rem;
+  color: var(--verde-claro);
+}
+
+.xcarb__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.xcarb__text p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,.8);
+}
+
+.xcarb__stats {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .9rem;
+  font-size: .9rem;
+  border-radius: 999px;
+}
+
+.stat--sustentabilidade {
+    background: rgba(120,255,180,.08);
+    border: 1px solid rgba(120,255,180,.2);
+}
+
+.stat--impacto {
+    background: rgba(120,255,180,.15);
+    border: 1px solid rgba(120,255,180,.35);
+    font-weight: 700;
+}
+
+.stat--setor {
+    background: rgba(255,185,80,.08);
+    border: 1px solid rgba(255,185,80,.2);
+}
+
+/* Seção: arcelormittal */
 
 .arcelormittal__container {
   max-width: 1300px;
@@ -352,6 +406,7 @@ body.tema-claro {
   justify-content: space-between;
   gap: 4rem;
   background: var(--bg-card);
+  box-shadow: var(--borda);
   border-radius: 24px;
   padding: 4rem;
 }
@@ -370,7 +425,7 @@ body.tema-claro {
 }
 
 .arcelormittal__textos p {
-  color: var(--texto-suave);
+  color: var(--texto);
   line-height: 1.8;
   font-size: clamp(0.75rem, 2vw, 1.2rem);
   margin-bottom: 2rem;
@@ -384,10 +439,10 @@ body.tema-claro {
 
 .arcelormittal__img img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 24px;
+  height: 400px;
+  max-width: 600px;
   object-fit: cover;
-  display: block;
+  border-radius: 24px;
 }
 
 /* contato */
@@ -397,7 +452,7 @@ body.tema-claro {
 }
 
 #contato p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--texto);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -405,10 +460,17 @@ body.tema-claro {
 #form-contato {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.form__grupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .form__grupo input {
@@ -443,20 +505,15 @@ footer {
 
 .footer__logo {
   display: block;
-
   margin-bottom: 0.8rem;
-
-  color: white;
-
+  color: #fff;
   font-size: 1.1rem;
   font-weight: 700;
 }
 
 .footer__tagline {
   color: rgba(255, 255, 255, 0.55);
-
   line-height: 1.7;
-
   font-size: 0.95rem;
 }
 
@@ -467,11 +524,9 @@ footer {
 }
 
 .footer__externo-titulo {
-  color: white;
-
+  color: #fff;
   font-size: 0.9rem;
   font-weight: 600;
-
   margin-bottom: 0.3rem;
 }
 

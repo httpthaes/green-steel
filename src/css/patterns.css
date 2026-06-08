@@ -40,15 +40,29 @@
   background: var(--ambar);
 }
 
+.btn-saiba-mais {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  width: fit-content;
+  color: var(--ambar);
+  font-weight: 600;
+  transition: .3s ease;
+}
+
+.btn-saiba-mais:hover {
+  text-decoration: underline;
+}
+
 h2 {
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--cor-secundaria);
   font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.1;
 }
 
 .subtitulo {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--texto);
   font-size: 1.1rem;
   line-height: 1.8;
 }
@@ -56,5 +70,5 @@ h2 {
 .secao {
   width: 100%;
   padding: 6rem 2rem;
-  color: var(--texto-suave);
+  color: var(--texto);
 }
