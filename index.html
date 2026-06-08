@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/css/patterns.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/light-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="src/js/app.js" defer></script>
     <title>Aço Verde | ArcelorMittal · XCarb®</title>
@@ -36,7 +37,7 @@
                 <!-- Alternar tema e idioma -->
                 <div class="topbar__theme-lang">
                     <button id="btn-tema" aria-label="Alternar tema" title="Alternar tema">
-                        <i class="fa-regular fa-moon" style="color: #bebebe;"></i>
+                        <i class="fa-regular fa-sun" style="color: #bebebe;"></i>
                     </button>
 
                     <div class="lang-toggle" id="btn-lang">
@@ -125,12 +126,11 @@
                         Vergalhão 50 S XCarb®
                     </button>
                     <button class="xcarb__tab">
-                        Cantoneira XCarb®
-                    </button>
-                    <button class="xcarb__tab">
                         Barra Chata Mola XCarb®
                     </button>
-
+                    <button class="xcarb__tab">
+                        Cantoneira XCarb®
+                    </button>
                 </div>
 
                 <div class="xcarb__showcase"></div>
@@ -141,15 +141,15 @@
                 <div class="arcelormittal__container">
                     <div class="arcelormittal__textos">
                         <span class="arcelormittal__label" data-i18n="arcelormittal-label">SOBRE NÓS</span>
-                        <h2 data-i18n="arcelormittal-titulo">Por trás do XCarb®</h2>
+                        <h2 data-i18n="arcelormittal-titulo">Por trás do XCarb</h2>
                         <p data-i18n="arcelormittal-descricao">
                             A transição para uma siderurgia de baixo carbono
                             já começou — e a ArcelorMittal aposta nisso
                             como parte do futuro da indústria.
                         </p>
 
-                        <a href="https://brasil.arcelormittal.com/arcelormittal-brasil/quem-somos" class="btn-primario"
-                            target="_blank" rel="noopener noreferrer">
+                        <a href="https://brasil.arcelormittal.com/arcelormittal-brasil/quem-somos" 
+                        class="btn-saiba-mais" target="_blank" rel="noopener noreferrer">
                             Saiba mais →
                         </a>
                     </div>
@@ -168,12 +168,10 @@
 
                 <form id="form-contato" novalidate>
                     <div class="form__grupo">
-                        <label for="nome" data-i18n="form-nome">Nome</label>
                         <input type="text" id="nome" name="nome" data-i18n-placeholder="form-nome-placeholder"
                             placeholder="Seu nome">
                     </div>
                     <div class="form__grupo">
-                        <label for="email" data-i18n="form-email">E-mail corporativo</label>
                         <input type="email" id="email" name="email" data-i18n-placeholder="form-email-placeholder"
                             placeholder="seu@empresa.com">
                     </div>
