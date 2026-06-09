@@ -97,29 +97,32 @@ body {
   opacity: 1;
 }
 
+.lang-toggle {
+  display: flex;
+  flex-direction: row;
+}
+
 .lang-toggle__option {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 60px;
   height: 42px;
+}
+
+.lang-toggle__option.inativo {
+  background: #f1f1f1;
+  color: #878787;
+  cursor: pointer;
+}
+
+.lang-toggle__option.ativo {
   background: #b6deb6;
   color: #0f2d1f;
   cursor: default;
 }
 
-.lang-toggle {
-  display: flex;
-  flex-direction: row;
-}
-
-.inativo {
-  cursor: pointer;
-  background: #f1f1f1;
-  color: #878787;
-}
-
-.inativo:hover {
+.lang-toggle__option.inativo:hover {
   background: #0f5513;
   color: #f1f1f1;
 }
