@@ -25,20 +25,49 @@ window.addEventListener('scroll', () => {
 
 // Toggle linguagem
 
-const btnLang = document.querySelectorAll('.btn-toggle__lang')
+async function init() {
+    translations = await dadosTraducoes()
+    mudarLinguagem('pt')
+}
 
-const btnLangEn = document.querySelector('#btn-toggle__en')
-const btnLangPt = document.querySelector('#btn-toggle__pt')
+init()
 
-btnLang.forEach(() => {
-    btnLang.addEventListener('click', () => {
-        if (btnLangEn.classList.contains('inativo')) {
-            btnLangPt.classList.add('inativo')
-            btnLangEn.classList.remove('inativo')
-        } else if (btnLangPt.classList.contains('inativo')) {
-            btnLangEn.classList.add('inativo')
-            btnLangPt.classList.remove('inativo')
-        }
+async function dadosTraducoes() {
+    try {
+        const response = await fetch('src/data/translations.json')
+
+        const data = await response.json()
+
+        return data
+    } catch (erro) {
+        console.error('Erro ao carregar traduções:', erro);
+    }
+}
+
+async function mudarLinguagem(idioma) {
+    const i18nElements = document.querySelectorAll('[data-i18n]')
+
+    console.log(i18nElements[0])
+
+    i18nElements.forEach((element) => {
+        element.innerHTML = translations[idioma][element.dataset.i18n]
+    })
+}
+
+const btnLang = document.querySelectorAll('.lang-toggle__option')
+
+btnLang.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        btnLang.forEach(btn => {
+            btn.classList.remove('ativo')
+            btn.classList.add('inativo')
+        })
+
+        btn.classList.remove('inativo')
+        btn.classList.add('ativo')
+
+        mudarLinguagem(btn.dataset.lang)
     })
 })
 
@@ -107,7 +136,6 @@ const produtos = [
             }
         ]
     },
-
     {
         image: "barra-chata-mola.jpg",
         title: "Barra Chata Mola XCarb®",
@@ -137,7 +165,6 @@ const produtos = [
             }
         ]
     },
-
     {
         image: "cantoneira.jpg",
         title: "Cantoneira XCarb®",
