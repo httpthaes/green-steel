@@ -1,3 +1,5 @@
+let idiomaAtual = 'pt'
+
 // Tema escuro/claro
 
 const btnTema = document.querySelector('#btn-tema');
@@ -25,13 +27,6 @@ window.addEventListener('scroll', () => {
 
 // Toggle linguagem
 
-async function init() {
-    translations = await dadosTraducoes()
-    mudarLinguagem('pt')
-}
-
-init()
-
 async function dadosTraducoes() {
     try {
         const response = await fetch('src/data/translations.json')
@@ -47,11 +42,14 @@ async function dadosTraducoes() {
 async function mudarLinguagem(idioma) {
     const i18nElements = document.querySelectorAll('[data-i18n]')
 
-    console.log(i18nElements[0])
-
     i18nElements.forEach((element) => {
         element.innerHTML = translations[idioma][element.dataset.i18n]
     })
+}
+
+async function init() {
+    translations = await dadosTraducoes()
+    mudarLinguagem('pt')
 }
 
 const btnLang = document.querySelectorAll('.lang-toggle__option')
@@ -68,6 +66,9 @@ btnLang.forEach(btn => {
         btn.classList.add('ativo')
 
         mudarLinguagem(btn.dataset.lang)
+        idiomaAtual = btn.dataset.lang
+        renderizarImpacto()
+        renderizarProduto(index)
     })
 })
 
@@ -78,118 +79,193 @@ const container = document.querySelector('.impacto__grid')
 const dados = [
     {
         title: "8%",
-        descricao: "das emissões globais vêm da indústria do aço"
+        descricao: {
+            pt: "das emissões globais vêm da indústria do aço",
+            en: "of global emissions come from the steel industry"
+        }
     },
     {
         title: "+52%",
-        descricao: "aumento do CO₂ desde a era industrial"
+        descricao: {
+            pt: "aumento do CO₂ desde a era industrial",
+            en: "increase in CO₂ emissions since the Industrial Revolution"
+        }
     },
     {
-        title: "1,9 bilhão",
-        descricao: "de toneladas de aço produzidas por ano"
+        title: {
+            pt: "1.9 bilhões",
+            en: "1.9 billion"
+        },
+        descricao: {
+            pt: "de toneladas de aço produzidas por ano",
+            en: "tons of steel produced every year"
+        }
     },
     {
-        title: "até 68%",
-        descricao: "menos emissões com aço XCarb®"
+        title: "68%",
+        descricao: {
+            pt: "menos emissões com aço XCarb®",
+            en: "lower emissions with XCarb® steel"
+        }
     }
 ]
 
-dados.forEach((dado) => {
-    container.innerHTML += `
+function renderizarImpacto() {
+    container.innerHTML = ""
+
+    dados.forEach((dado) => {
+        const renderizarTitle =
+            typeof dado.title === "string"
+                ? dado.title
+                : dado.title[idiomaAtual]
+
+        container.innerHTML += `
         <div class="impacto__card">
-            <span class="impacto__dado">${dado.title}</span>
-            <p>${dado.descricao}</p>
+            <span class="impacto__dado">${renderizarTitle}</span>
+            <p>${dado.descricao[idiomaAtual]}</p>
         </div>
         `
-})
+    })
+}
+
 
 // Produtos xcarb
 
 const produtos = [
-
     {
         image: "vergalhao.jpg",
-        title: "Vergalhão 50 S XCarb®",
-        slogan: "Menos carbono. A mesma resistência.",
+        title: {
+            pt: "Vergalhão 50 S XCarb®",
+            en: "XCarb® Rebar 50 S"
+        },
+        slogan: {
+            pt: "Menos carbono. A mesma resistência.",
+            en: "Less carbon. Same strength."
+        },
         url: "vergalhao-arcelormittal-50-s-xcarb",
-
         stats: [
             {
                 icon: "fa-recycle",
-                text: "100% reciclado",
+                text: {
+                    pt: "100% reciclado",
+                    en: "100% recycled"
+                },
                 type: "sustentabilidade"
             },
             {
                 icon: "fa-bolt",
-                text: "Energia renovável",
+                text: {
+                    pt: "Energia renovável",
+                    en: "Renewable energy"
+                },
                 type: "sustentabilidade"
             },
             {
                 icon: "fa-arrow-down",
-                text: "68% menos CO₂e",
+                text: {
+                    pt: "68% menos CO₂e",
+                    en: "68% less CO₂e"
+                },
                 type: "impacto"
             },
             {
                 icon: "fa-building",
-                text: "Construção Civil",
+                text: {
+                    pt: "Construção Civil",
+                    en: "Construction"
+                },
                 type: "setor"
             }
         ]
     },
     {
         image: "barra-chata-mola.jpg",
-        title: "Barra Chata Mola XCarb®",
-        slogan: "Sustentabilidade para a mobilidade.",
+        title: {
+            pt: "Barra Chata Mola XCarb®",
+            en: "XCarb® Flat Spring Bar"
+        },
+        slogan: {
+            pt: "Sustentabilidade para a mobilidade.",
+            en: "Sustainability for mobility."
+        },
         url: "barra-chata-mola-xcarb",
-
         stats: [
             {
                 icon: "fa-recycle",
-                text: "100% reciclado",
+                text: {
+                    pt: "100% reciclado",
+                    en: "100% recycled"
+                },
                 type: "sustentabilidade"
             },
             {
                 icon: "fa-bolt",
-                text: "Energia renovável",
+                text: {
+                    pt: "Energia renovável",
+                    en: "Renewable energy"
+                },
                 type: "sustentabilidade"
             },
             {
                 icon: "fa-arrow-down",
-                text: "63% menos CO₂e",
+                text: {
+                    pt: "63% menos CO₂e",
+                    en: "63% less CO₂e"
+                },
                 type: "impacto"
             },
             {
                 icon: "fa-car",
-                text: "Automotivo",
+                text: {
+                    pt: "Automotivo",
+                    en: "Automotive"
+                },
                 type: "setor"
             }
         ]
     },
     {
         image: "cantoneira.jpg",
-        title: "Cantoneira XCarb®",
-        slogan: "Versatilidade estrutural com menor impacto ambiental.",
+        title: {
+            pt: "Cantoneira XCarb®",
+            en: "XCarb® Angle Bar"
+        },
+        slogan: {
+            pt: "Versatilidade estrutural com menor impacto ambiental.",
+            en: "Structural versatility with lower environmental impact."
+        },
         url: "cantoneira-xcarb",
-
         stats: [
             {
                 icon: "fa-recycle",
-                text: "100% reciclado",
+                text: {
+                    pt: "100% reciclado",
+                    en: "100% recycled"
+                },
                 type: "sustentabilidade"
             },
             {
                 icon: "fa-bolt",
-                text: "Energia renovável",
+                text: {
+                    pt: "Energia renovável",
+                    en: "Renewable energy"
+                },
                 type: "sustentabilidade"
             },
             {
                 icon: "fa-arrow-down",
-                text: "60% menos CO₂e",
+                text: {
+                    pt: "60% menos CO₂e",
+                    en: "60% less CO₂e"
+                },
                 type: "impacto"
             },
             {
                 icon: "fa-industry",
-                text: "Industrial",
+                text: {
+                    pt: "Industrial",
+                    en: "Industrial"
+                },
                 type: "setor"
             }
         ]
@@ -204,7 +280,7 @@ function renderizarProduto(index) {
         .map(stat => `
             <div class="stat stat--${stat.type}">
                 <i class="fa-solid ${stat.icon}"></i>
-                <span>${stat.text}</span>
+                <span>${stat.text[idiomaAtual]}</span>
             </div>
         `)
         .join('');
@@ -213,13 +289,13 @@ function renderizarProduto(index) {
         <div class="xcarb__card"> 
             <img src="../src/assets/${produtos[index].image}"> 
             <div class="xcarb__text"> 
-                <h3>${produtos[index].title}</h3>
-                <p>${produtos[index].slogan}</p>
+                <h3>${produtos[index].title[idiomaAtual]}</h3>
+                <p>${produtos[index].slogan[idiomaAtual]}</p>
                 <div class="xcarb__stats">
                     ${statsHTML}
                 </div>
                 <a href="https://conexao.arcelormittal.com.br/produtos/${produtos[index].url}" 
-                class="btn-saiba-mais" target="_blank" rel="noopener noreferrer">
+                class="btn-saiba-mais" target="_blank" rel="noopener noreferrer" data-i18n="xcarb-saiba">
                     Saiba mais →
                 </a>
             </div> 
@@ -237,13 +313,10 @@ tabs.forEach((tab, index) => {
         tab.classList.add('ativo')
 
         renderizarProduto(index)
+        mudarLinguagem(idiomaAtual)
     })
 })
 
-function renderizarTabInicial() {
-    document.addEventListener("DOMContentLoaded", () => {
-        renderizarProduto(0)
-    })
-}
-
-renderizarTabInicial();
+init()
+renderizarImpacto()
+renderizarProduto(0)
