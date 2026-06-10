@@ -1,4 +1,9 @@
 @media (max-width: 900px) {
+
+  .secao {
+    padding: 4rem 2rem;
+  }
+
   .topbar {
     padding: 1rem 1.5rem;
   }
@@ -30,25 +35,10 @@
     display: none;
   }
 
-  .impacto__grid {
-    display: flex;
-    flex-direction: column;
-  }
-
   .xcarb__card {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
-  .arcelormittal__container {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .arcelormittal__imagem img {
-    max-width: 100%;
-  }
-  
   #form-contato {
     display: flex;
     flex-direction: column;
@@ -63,5 +53,29 @@
 
   .footer__topo {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1100px) {
+  .impacto__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arcelormittal__container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .impacto__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .xcarb__stats {
+    grid-template-columns: 1fr;
   }
 }
