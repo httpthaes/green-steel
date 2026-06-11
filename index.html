@@ -50,12 +50,27 @@
                         </span>
                     </div>
 
-                    <div class="topbar__menu-bar">
-                        <i class="fa-solid fa-bars" style="color: #bebebe;"></i>
+                    <div class="topbar__menu-bar" id="btn-menu">
+                        <i class="fa-solid fa-bars" style="color: #bebebe;" id="menu-icon"></i>
                     </div>
                 </div>
             </div>
         </header>
+
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <nav>
+                <ul>
+                    <li><a href="#xcarb" class="mobile-menu__link">XCarb®</a></li>
+                    <li><a href="#arcelormittal" class="mobile-menu__link">ArcelorMittal</a></li>
+                    <li><a href="#contato" class="mobile-menu__link" data-i18n="nav-contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-toggle mobile-menu__lang" id="btn-lang-mobile">
+                <span class="lang-toggle__option inativo" data-lang="en">EN</span>
+                <span class="lang-toggle__option ativo" data-lang="pt">PT</span>
+            </div>
+        </div>
 
         <main>
             <!-- ========== HERO ========== -->
@@ -148,8 +163,9 @@
                             como parte do futuro da indústria.
                         </p>
 
-                        <a href="https://brasil.arcelormittal.com/arcelormittal-brasil/quem-somos" 
-                        class="btn-saiba-mais" target="_blank" rel="noopener noreferrer" data-i18n="arcelormittal-btn">
+                        <a href="https://brasil.arcelormittal.com/arcelormittal-brasil/quem-somos"
+                            class="btn-saiba-mais" target="_blank" rel="noopener noreferrer"
+                            data-i18n="arcelormittal-btn">
                             Saiba mais →
                         </a>
                     </div>
