@@ -1,4 +1,5 @@
 let idiomaAtual = 'pt'
+let indexAtual = 0
 
 // Tema escuro/claro
 
@@ -39,11 +40,13 @@ async function dadosTraducoes() {
     }
 }
 
-async function mudarLinguagem(idioma) {
-    const i18nElements = document.querySelectorAll('[data-i18n]')
+function mudarLinguagem(idioma) {
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+        el.innerHTML = translations[idioma][el.dataset.i18n]
+    })
 
-    i18nElements.forEach((element) => {
-        element.innerHTML = translations[idioma][element.dataset.i18n]
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        el.placeholder = translations[idioma][el.dataset.i18nPlaceholder]
     })
 }
 
@@ -68,7 +71,7 @@ btnLang.forEach(btn => {
         mudarLinguagem(btn.dataset.lang)
         idiomaAtual = btn.dataset.lang
         renderizarImpacto()
-        renderizarProduto(index)
+        renderizarProduto(indexAtual)
     })
 })
 
@@ -309,9 +312,9 @@ tabs.forEach((tab, index) => {
         tabs.forEach(btn => {
             btn.classList.remove('ativo')
         })
-
         tab.classList.add('ativo')
 
+        indexAtual = index 
         renderizarProduto(index)
         mudarLinguagem(idiomaAtual)
     })
