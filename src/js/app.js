@@ -4,19 +4,15 @@ let indexAtual = 0
 // Tema escuro/claro
 
 const btnTema = document.querySelector('#btn-tema');
-const icon = document.querySelector('i').classList
+const icon = document.querySelector('#theme-icon');
 
 btnTema.addEventListener('click', () => {
-    document.body.classList.toggle('tema-claro')
 
-    if (icon.contains('fa-moon')) {
-        icon.remove('fa-moon');
-        icon.add('fa-sun');
-    } else {
-        icon.remove('fa-sun');
-        icon.add('fa-moon');
-    }
-})
+    document.body.classList.toggle('tema-claro');
+
+    icon.classList.toggle('bi-moon')
+    icon.classList.toggle('bi-brightness-high');
+});
 
 
 // Navbar escurece ao rolar
