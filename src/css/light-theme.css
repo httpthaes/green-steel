@@ -8,4 +8,49 @@ body.tema-claro {
   --bg-tab: rgba(120, 255, 180, 0.08);
   --borda-tab: 1px solid rgba(255, 255, 255, 0.08);
   --texto-tab: rgba(255, 255, 255, 0.65);
+
+  /* tabs */
+  .xcarb__tab {
+    background: #fff;
+    color: #3a3a3a;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .xcarb__tab:hover {
+    border-color: rgba(45, 122, 58, 0.4);
+    color: #1a5c25;
+  }
+
+  .xcarb__tab.ativo {
+    background: rgba(45, 122, 58, 0.1);
+    border-color: rgba(45, 122, 58, 0.4);
+    color: #1a5c25;
+  }
+  
+  /* stats */
+  .stat--sustentabilidade {
+    background: rgba(45, 122, 58, 0.08);
+    border-color: rgba(45, 122, 58, 0.25);
+    color: #1a5c25;
+  }
+
+  .stat--impacto {
+    background: rgba(45, 122, 58, 0.15);
+    border-color: rgba(45, 122, 58, 0.4);
+    color: #1a5c25;
+  }
+
+  .stat--setor {
+    background: rgba(180, 120, 20, 0.08);
+    border-color: rgba(180, 120, 20, 0.3);
+    color: #7a5010;
+  }
+
+  .form__grupo input {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+  .arcelormittal__container {
+    box-shadow: none;
+  }
 }

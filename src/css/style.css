@@ -28,6 +28,7 @@ body {
 .btn-primario:hover,
 .btn-secundario:hover {
   background: var(--ambar);
+  color: #0f2d1f;
   transform: translateY(-3px);
   opacity: 0.9;
 }
@@ -384,7 +385,7 @@ body {
 
 .xcarb__text p {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, .8);
+  color: var(--texto);
 }
 
 .xcarb__stats {
