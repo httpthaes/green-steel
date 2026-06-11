@@ -320,6 +320,46 @@ tabs.forEach((tab, index) => {
     })
 })
 
+/* menu */
+
+const btnMenu = document.querySelector('#btn-menu');
+const mobileMenu = document.querySelector('#mobile-menu');
+const menuIcon = document.querySelector('#menu-icon');
+const mobileLinks = document.querySelectorAll('.mobile-menu__link');
+
+btnMenu.addEventListener('click', () => {
+    const aberto = mobileMenu.classList.toggle('aberto')
+    mobileMenu.setAttribute('aria-hidden', !aberto)
+    
+    menuIcon.classList.toggle('fa-bars', !aberto)
+    menuIcon.classList.toggle('fa-angle-down', aberto)
+});
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('aberto');
+        mobileMenu.setAttribute('aria-hidden', true);
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-angle-down');
+    });
+});
+
+const btnLangMobile = document.querySelectorAll('#btn-lang-mobile .lang-toggle__option');
+
+btnLangMobile.forEach(btn => {
+    btn.addEventListener('click', () => {
+        [...document.querySelectorAll('.lang-toggle__option')].forEach(op => {
+            op.classList.toggle('ativo', op.dataset.lang === btn.dataset.lang);
+            op.classList.toggle('inativo', op.dataset.lang !== btn.dataset.lang);
+        });
+
+        mudarLinguagem(btn.dataset.lang);
+        idiomaAtual = btn.dataset.lang;
+        renderizarImpacto();
+        renderizarProduto(indexAtual);
+    });
+});
+
 init()
 renderizarImpacto()
 renderizarProduto(0)
