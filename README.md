@@ -1,41 +1,63 @@
 <div align="center">
-  
-# Aço Verde
 
-Landing page B2B desenvolvida como projeto integrador da formação **Jornada Liga STEAM**.
+# Aço Verde 
 
-[PT-BR](README.md) | [EN-US](README-en-US.md)
+**Apresentando o XCarb® — aço de baixo carbono da ArcelorMittal.**
+<br>
+
+ [English](/README-en-US.md) | **Português**
+
+<img width="1200" alt="{5B73731F-EAAB-4C0D-8B9A-70D8BED50C63}" src="https://github.com/user-attachments/assets/5e68f325-a367-45b0-ac4e-9f353d40160b" />
+
 
 </div>
 
-O projeto é uma aplicação web voltada para apresentação das iniciativas sustentáveis da ArcelorMittal por meio do programa XCarb®. 
+> Projeto integrador da formação Jornada Liga STEAM. O **Aço Verde** é uma landing page corporativa desenvolvida para aproximar empresas do programa **XCarb® da ArcelorMittal**, apresentando soluções de aço de baixa emissão que contribuem para metas ESG e para a redução do impacto ambiental da indústria.
 
-A proposta é apresentar às empresas uma alternativa mais sustentável ao aço tradicional que já utilizam, destacando soluções produzidas com foco na descarbonização e na redução de emissões de carbono.
+🔗 **[Acesse o projeto →](https://green-steel-two.vercel.app/)**
 
-## Sobre o projeto
+---
 
-A aplicação simula uma landing page corporativa da ArcelorMittal, implementada com recursos modernos de desenvolvimento front-end.
+## Funcionalidades
+ 
+- **Tema claro/escuro** — alternância via CSS custom properties, sem recarregamento
+- **Internacionalização (PT/EN)** — sistema de traduções via JSON externo, aplicado dinamicamente com JavaScript puro
+- **Menu mobile com animação** — overlay com transição suave, fechamento automático ao navegar
+- **Grid de dados dinâmico** — renderizado via JavaScript com dados centralizados
+- **Showcase de produtos com tabs** — troca de conteúdo sem recarregar a página; preload de imagens para evitar flicker
+- **Layout responsivo** — breakpoints em 576px, 768px, 900px e 1100px
+  
+---
+ 
+## Arquitetura CSS
+ 
+O projeto adota uma **arquitetura CSS em camadas por responsabilidade**, inspirada no padrão ITCSS:
+ 
+| Arquivo | Responsabilidade |
+|---|---|
+| `reset.css` | Neutraliza estilos padrão do navegador |
+| `variables.css` | Tokens de design: cores, tipografia, espaçamentos |
+| `patterns.css` | Utilitários e elementos reutilizáveis (botões, seções, headings) |
+| `style.css` | Componentes específicos da página |
+| `light-theme.css` | Sobrescrita de variáveis para o tema claro |
+| `responsive.css` | Media queries isoladas, sem repetição de regras |
+ 
+Essa separação facilita manutenção e escala: alterações no tema não tocam na estrutura, e regras responsivas ficam centralizadas.
+ 
+---
+ 
+## Tecnologias
+ 
+- HTML5 semântico (`<section>`, `<nav>`, `aria-*`, `role`)
+- CSS3 — custom properties, `clamp()`, `grid`, `backdrop-filter`
+- JavaScript — DOM manipulation, Fetch API, módulo de traduções JSON
+- Font Awesome · Bootstrap Icons · Google Fonts (Manrope + Playfair Display)
 
-Entre as funcionalidades implementadas estão:
-
-- Alternância entre tema claro e escuro;
-- Tradução entre português e inglês;
-- Timeline dinâmica com JavaScript;
-- Grid interativo de conteúdos;
-- Carrossel de produtos;
-- Formulário com feedback visual;
-- Layout responsivo e estrutura semântica.
-
-## Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
-
+---
+ 
 ## Estrutura do projeto
-
-```bash
+ 
+```
 Aco-Verde/
 │
 ├── index.html
@@ -44,15 +66,20 @@ Aco-Verde/
 │
 └── src/
     ├── css/
+    │   ├── reset.css
+    │   ├── variables.css
+    │   ├── patterns.css
+    │   ├── style.css
+    │   ├── light-theme.css
+    │   └── responsive.css
     ├── js/
+    │   └── app.js
     ├── assets/
+    │   ├── industria.jpg
+    │   ├── arcelormittal.jpg
+    │   ├── vergalhao.jpg
+    │   ├── barra-chata-mola.jpg
+    │   └── cantoneira.jpg
     └── data/
+        └── translations.json
 ```
-
----
-
-### Referências Utilizadas
-
-> [ArcelorMittal - Entenda o XCarb](https://conexao.arcelormittal.com.br/noticias/entenda-o-xcarb-o-padrao-de-aco-sustentavel-da-arcelormittal)<br>
-> [Arcelor Mittal - Mudanças Climáticas](https://brasil.arcelormittal.com/sustentabilidade-inovacao/sustentabilidade/mudancas-climaticas)<br>
-> [Relatório de Sustentabilidade 2024](https://brasil.arcelormittal.com/assets/pdf/arcelormittal/publications-reports/relatorio-de-sustentabilidade-2024.pdf)
