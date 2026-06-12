@@ -1,41 +1,62 @@
 <div align="center">
-  
+
 # Aço Verde
 
-A B2B landing page developed as the final integrative project for the **Jornada Liga STEAM** program.
+**Presenting XCarb® — ArcelorMittal's low-carbon steel.**
+<br>
 
-[PT-BR](README.md) | [EN-US](README-en-US.md)
+**English** | [Português](/README.md)
+
+<img width="1200" alt="Aço Verde project preview" src="https://github.com/user-attachments/assets/5e68f325-a367-45b0-ac4e-9f353d40160b" />
 
 </div>
 
-This project is a web application designed to showcase ArcelorMittal’s sustainable initiatives through the XCarb® program.
+> Capstone project for the Jornada Liga STEAM program. Aço Verde is a corporate landing page designed to connect businesses with ArcelorMittal's XCarb® program, showcasing low-emission steel solutions that support ESG goals and help reduce the environmental footprint of industry.
 
-The goal is to offer companies a more sustainable alternative to traditional steel, highlighting innovative solutions focused on decarbonization and reducing carbon emissions.
+> 🔗 **[View Demo →](https://green-steel-two.vercel.app/)**
 
-## About the Project
+---
 
-The application simulates an ArcelorMittal corporate landing page, implemented with modern front-end features.
+## Features
 
-Key features include:
+- **Light/dark theme** — toggled via CSS custom properties, no page reload
+- **Internationalization (PT/EN)** — translation system using an external JSON file, applied dynamically with vanilla JavaScript
+- **Animated mobile menu** — overlay with smooth transition, auto-closes on navigation
+- **Dynamic data grid** — rendered via JavaScript from a centralized data source
+- **Product showcase with tabs** — content switching without page reload; image preloading to prevent flicker
+- **Responsive layout** — breakpoints at 576px, 768px, 900px, and 1100px
 
-- Light and dark theme toggle
-- Multi-language support (Portuguese and English)
-- Dynamic timeline built with JavaScript
-- Interactive content grid
-- Product carousel
-- Contact form with visual feedback
-- Responsive layout and semantic HTML structure
+---
 
-## Technologies Used
+## CSS Architecture
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
+The project follows a **layered CSS architecture by responsibility**, inspired by the ITCSS pattern:
+
+| File | Responsibility |
+|---|---|
+| `reset.css` | Neutralizes browser default styles |
+| `variables.css` | Design tokens: colors, typography, spacing |
+| `patterns.css` | Utilities and reusable elements (buttons, sections, headings) |
+| `style.css` | Page-specific components |
+| `light-theme.css` | Variable overrides for the light theme |
+| `responsive.css` | Isolated media queries, no rule duplication |
+
+This separation improves maintainability and scalability: theme changes don't affect structure, and responsive rules are centralized in one place.
+
+---
+
+## Technologies
+
+- Semantic HTML5 (`<section>`, `<nav>`, `aria-*`, `role`)
+- CSS3 — custom properties, `clamp()`, `grid`, `backdrop-filter`
+- JavaScript — DOM manipulation, Fetch API, JSON translation module
+- Font Awesome · Bootstrap Icons · Google Fonts (Manrope + Playfair Display)
+
+---
 
 ## Project Structure
 
-```bash
+```
 Aco-Verde/
 │
 ├── index.html
@@ -44,12 +65,20 @@ Aco-Verde/
 │
 └── src/
     ├── css/
+    │   ├── reset.css
+    │   ├── variables.css
+    │   ├── patterns.css
+    │   ├── style.css
+    │   ├── light-theme.css
+    │   └── responsive.css
     ├── js/
+    │   └── app.js
     ├── assets/
-    ├── data/
-
-### References
-
-> [ArcelorMittal - Understanding XCarb](https://conexao.arcelormittal.com.br/noticias/entenda-o-xcarb-o-padrao-de-aco-sustentavel-da-arcelormittal)<br>
-> [ArcelorMittal - Climate Change](https://brasil.arcelormittal.com/sustentabilidade-inovacao/sustentabilidade/mudancas-climaticas)<br>
-> [2024 Sustainability Report](https://brasil.arcelormittal.com/assets/pdf/arcelormittal/publications-reports/relatorio-de-sustentabilidade-2024.pdf)
+    │   ├── industria.jpg
+    │   ├── arcelormittal.jpg
+    │   ├── vergalhao.jpg
+    │   ├── barra-chata-mola.jpg
+    │   └── cantoneira.jpg
+    └── data/
+        └── translations.json
+```
