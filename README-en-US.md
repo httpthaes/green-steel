@@ -13,7 +13,7 @@
 
 > Capstone project for the Jornada Liga STEAM program. Aço Verde is a corporate landing page designed to connect businesses with ArcelorMittal's XCarb® program, showcasing low-emission steel solutions that support ESG goals and help reduce the environmental footprint of industry.
 
-> 🔗 **[View Demo →](https://green-steel-two.vercel.app/)**
+🔗 **[View Demo →](https://green-steel-two.vercel.app/)**
 
 ---
 
