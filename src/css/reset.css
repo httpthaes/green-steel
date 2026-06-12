@@ -1,6 +1,8 @@
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    scroll-padding-top: 100px;
 }
 
 * {
