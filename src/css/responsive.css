@@ -23,6 +23,7 @@
   }
 
   .mobile-menu {
+    visibility: hidden;
     display: flex;
     position: fixed;
     top: 70px;
@@ -36,6 +37,7 @@
     padding: 1.5rem 2rem;
     flex-direction: column;
     gap: 1.5rem;
+    pointer-events: none;
 
     transform: translateY(-10px);
     opacity: 0;
@@ -43,6 +45,9 @@
   }
 
   .mobile-menu.aberto {
+    visibility: visible;
+    pointer-events: auto;
+    
     opacity: 1;
     transform: translateY(0);
   }
