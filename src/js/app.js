@@ -274,6 +274,13 @@ const produtos = [
 const tabs = document.querySelectorAll('.xcarb__tab');
 const showcase = document.querySelector('.xcarb__showcase');
 
+function preloadImages() {
+    produtos.forEach(produto => {
+        const img = new Image()
+        img.src = `src/assets/${produto.image}`
+    })
+}
+
 function renderizarProduto(index) {
     const statsHTML = produtos[index].stats
         .map(stat => `
@@ -286,7 +293,7 @@ function renderizarProduto(index) {
 
     showcase.innerHTML = `
         <div class="xcarb__card"> 
-            <img src="../src/assets/${produtos[index].image}"> 
+            <img src="src/assets/${produtos[index].image}"> 
             <div class="xcarb__text"> 
                 <h3>${produtos[index].title[idiomaAtual]}</h3>
                 <p>${produtos[index].slogan[idiomaAtual]}</p>
@@ -357,5 +364,6 @@ btnLangMobile.forEach(btn => {
 });
 
 init()
+preloadImages()
 renderizarImpacto()
 renderizarProduto(0)
