@@ -20,8 +20,8 @@
 
 ## Funcionalidades
  
-- **Tema claro/escuro** — alternância via CSS custom properties, sem recarregamento
-- **Internacionalização (PT/EN)** — sistema de traduções via JSON externo, aplicado dinamicamente com JavaScript puro
+- **Tema claro/escuro** — alternância via CSS custom properties, sem recarregar a página
+- **Internacionalização (PT/EN)** — sistema de traduções via JSON externo, aplicado dinamicamente via JavaScript
 - **Menu mobile com animação** — overlay com transição suave, fechamento automático ao navegar
 - **Grid de dados dinâmico** — renderizado via JavaScript com dados centralizados
 - **Showcase de produtos com tabs** — troca de conteúdo sem recarregar a página; preload de imagens para evitar flicker
