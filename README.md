@@ -7,8 +7,7 @@
 
  [English](/README-en-US.md) | **Português**
 
-<img width="1200" alt="{5B73731F-EAAB-4C0D-8B9A-70D8BED50C63}" src="https://github.com/user-attachments/assets/5e68f325-a367-45b0-ac4e-9f353d40160b" />
-
+<img width="1200" alt="{578D7640-1555-4BA4-BA50-9736FC0D15EC}" src="https://github.com/user-attachments/assets/c8f6ca6c-e865-4dab-9192-7f5f498cba73" />
 
 </div>
 
