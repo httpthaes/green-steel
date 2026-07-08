@@ -7,7 +7,8 @@
 
 **English** | [Português](/README.md)
 
-<img width="1200" alt="Aço Verde project preview" src="https://github.com/user-attachments/assets/d06ce075-084e-43e3-b6de-83c4ab7bd4cb" />
+<img width="1200" alt="{1C92AB90-0F8A-4BCD-BE6E-AEA5F2EDE30A}" src="https://github.com/user-attachments/assets/5035c36c-119c-4abd-bf28-1cd0996398cb" />
+
 
 </div>
 
